@@ -18,7 +18,7 @@ const registerSchema = z.object({
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-
+ 
     const validation = registerSchema.safeParse(body);
 
     if (!validation.success) {
